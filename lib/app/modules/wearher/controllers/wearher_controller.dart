@@ -1,23 +1,18 @@
 import 'package:get/get.dart';
+import 'package:step_01/app/data/models/weather_model.dart';
+import 'package:step_01/app/data/repositories/weather_repo.dart';
 
 class WearherController extends GetxController {
-  //TODO: Implement WearherController
+  Rx<Weather?> weather = Rxn();
+  final repo = WeatherRepo();
 
-  final count = 0.obs;
+  Future<void> getWeather() async {
+    weather.value = await repo.getWeather();
+  }
+
   @override
   void onInit() {
     super.onInit();
+    getWeather();
   }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }

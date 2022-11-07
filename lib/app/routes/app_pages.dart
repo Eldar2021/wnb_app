@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:get/get.dart';
 
 import '../modules/bmi/bindings/bmi_binding.dart';
@@ -12,8 +14,8 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  // ignore: constant_identifier_names
   static const INITIAL = Routes.NEWS;
+  static const WEARHER = Routes.WEARHER;
 
   static final routes = [
     GetPage(
@@ -23,7 +25,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.WEARHER,
-      page: () => const WearherView(),
+      page: () => const WeatherView(),
       binding: WearherBinding(),
     ),
     GetPage(

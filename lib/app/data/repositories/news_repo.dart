@@ -10,7 +10,7 @@ class NewsRepo {
   final dio = Dio();
 
   Future<News?> getNews() async {
-    final response = await dio.get(AppConst.newsApi);
+    final response = await dio.get(ApiConst.newsApi);
     if (response.statusCode == 200 || response.statusCode == 201) {
       final news = News.fromJson(response.data);
       return news;
