@@ -32,4 +32,32 @@ class AppTextStyle {
         fontSize: size,
         fontWeight: FontWeight.w300,
       );
+
+  static const TextStyle greyTextStyle = TextStyle(
+    fontSize: 28,
+    color: AppColors.greyText,
+  );
+
+  static const TextStyle cmStyle = TextStyle(
+    fontSize: 18,
+    color: AppColors.greyText,
+    height: 3.7,
+  );
+
+  static const TextStyle valueStyle = TextStyle(
+    fontSize: 65,
+    color: AppColors.white,
+    fontWeight: FontWeight.w700,
+  );
+
+  static const TextStyle titleStyle = TextStyle(
+    fontSize: 26,
+    fontWeight: FontWeight.w700,
+    height: 0.3,
+  );
+
+  static const TextStyle resultTextStyle = TextStyle(
+    fontSize: 26,
+    fontWeight: FontWeight.w700,
+  );
 }

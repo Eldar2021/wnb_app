@@ -19,9 +19,7 @@ class NewsView extends GetView<NewsController> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {
-              Get.toNamed(AppPages.WEARHER);
-            },
+            onPressed: () => Get.toNamed(AppPages.WEARHER),
             icon: const Icon(Icons.cloud),
           ),
         ],
@@ -40,6 +38,10 @@ class NewsView extends GetView<NewsController> {
             return const Center(child: CircularProgressIndicator());
           }
         }),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () => Get.toNamed(AppPages.BMI),
+        label: const Text('Go BMI'),
       ),
     );
   }

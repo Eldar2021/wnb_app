@@ -16,6 +16,7 @@ class AppPages {
 
   static const INITIAL = Routes.NEWS;
   static const WEARHER = Routes.WEARHER;
+  static const BMI = Routes.BMI;
 
   static final routes = [
     GetPage(
